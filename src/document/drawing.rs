@@ -264,7 +264,15 @@ pub struct GraphicData<'a> {
     #[xml(default, attr = "uri")]
     pub uri: Cow<'a, str>,
     #[xml(child = "pic:pic")]
-    pub pic: Picture<'a>,
+    pub pic: Option<Picture<'a>>,
+}
+
+#[derive(Debug, Default, XmlRead, XmlWrite, Clone)]
+#[cfg_attr(test, derive(PartialEq))]
+#[xml(tag = "dgm:relIds")]
+pub struct Diagram<'a> {
+    #[xml(default, attr = "xmlns:dgm")]
+    pub a: Cow<'a, str>,
 }
 
 #[derive(Debug, Default, XmlRead, XmlWrite, Clone)]
