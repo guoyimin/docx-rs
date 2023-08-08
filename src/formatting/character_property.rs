@@ -586,7 +586,7 @@ __string_enum! {
         Dot = "dot",
         Comma = "comma",
         Circle = "circle",
-        UnderDot = "underdot",
+        UnderDot = "underDot",
     }
 }
 

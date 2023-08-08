@@ -63,7 +63,7 @@ impl<'a, T: Into<Cow<'a, str>>> From<T> for TableStyleId<'a> {
 #[cfg_attr(test, derive(PartialEq))]
 #[xml(tag = "w:tblStylePr")]
 pub struct ConditionalTableProperty<'a> {
-    #[xml(attr = "type")]
+    #[xml(attr = "w:type")]
     pub condition: ConditionType,
     /// Specifies a set of paragraph properties
     #[xml(default, child = "w:pPr")]
