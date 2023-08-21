@@ -251,7 +251,7 @@ __string_enum! {
 #[xml(tag = "w:vAlign")]
 pub struct VAlign {
     #[xml(attr = "w:val")]
-    pub val: TextDirectionType,
+    pub val: VAlignType,
 }
 
 #[derive(Debug, Default, Clone)]
